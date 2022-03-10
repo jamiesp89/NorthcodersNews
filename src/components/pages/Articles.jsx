@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
-import { getAllArticles } from "../../Api";
+import { useParams } from "react-router-dom";
+import { getArticles } from "../../Api";
 import ArticleCard from "../ArticleCard";
 
 export default function Articles() {
   const [articles, setArticles] = useState([]);
 
+  const { topic } = useParams();
+
   useEffect(() => {
-    getAllArticles().then((res) => {
+    getArticles(topic).then((res) => {
       setArticles(res);
     });
-  }, []);
+  }, [topic]);
 
   return (
     <div>

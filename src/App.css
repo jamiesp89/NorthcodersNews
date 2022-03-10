@@ -2,6 +2,30 @@
   text-align: center;
 }
 
+.homeLink {
+  font-family: "League Gothic", sans-serif;
+  text-align: center;
+  font-size: 64px;
+  color: #222;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.homeLink:after,
+.homeLink:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #c50000;
+  border-top: 1px solid #c50000;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
 .articles {
   text-align: center;
 }
@@ -9,4 +33,5 @@
 .articleCard {
   border-style: solid;
   border: 1px solid black;
+  margin: 10px;
 }
