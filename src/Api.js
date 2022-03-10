@@ -21,3 +21,9 @@ exports.getTopics = () => {
     return response.data.topics;
   });
 };
+
+exports.getArticleById = (article_id) => {
+  return ncApi.get(`/articles/${article_id}`).then((response) => {
+    return response.data.article;
+  });
+};
