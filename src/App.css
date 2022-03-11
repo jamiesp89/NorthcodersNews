@@ -58,3 +58,7 @@
   color: #222;
   font-family: "Playfair Display", serif;
 }
+
+.disabled {
+  border: solid 2px green;
+}

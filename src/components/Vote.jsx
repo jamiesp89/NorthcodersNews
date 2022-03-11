@@ -44,9 +44,21 @@ export default function Vote({ article_id, votes }) {
 
   return (
     <div className="vote">
-      <button onClick={handleVoteUp}>like</button>
+      <button
+        className={votedUp ? "disabled" : "active"}
+        disabled={votedDown}
+        onClick={handleVoteUp}
+      >
+        like
+      </button>
       <p>Votes {displayVote}</p>
-      <button onClick={handleVoteDown}>dislike</button>
+      <button
+        className={votedDown ? "disabled" : "active"}
+        disabled={votedUp}
+        onClick={handleVoteDown}
+      >
+        dislike
+      </button>
     </div>
   );
 }
