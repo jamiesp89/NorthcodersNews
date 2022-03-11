@@ -15,8 +15,8 @@ export default function FullArticle() {
   }, [article_id]);
 
   return (
-    <div>
-      <p>{article.title}</p>
+    <div className="articleFull">
+      <p className="articleFullTitle">{article.title}</p>
       <p>{article.body}</p>
       <p>{article.topic}</p>
       <p>{article.author}</p>
