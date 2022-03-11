@@ -27,3 +27,11 @@ exports.getArticleById = (article_id) => {
     return response.data.article;
   });
 };
+
+exports.patchVotes = (article_id, vote) => {
+  return ncApi
+    .patch(`/articles/${article_id}`, { inc_votes: vote })
+    .then((response) => {
+      return response;
+    });
+};
